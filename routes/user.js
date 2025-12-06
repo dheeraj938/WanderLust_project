@@ -7,6 +7,10 @@ const { saveRedirectUrl } = require("../middleware.js");
 
 const userController=require("../controllers/users.js");
 
+// Redirect root requests to the login page so users land on sign-in instead of 404
+router.get("/", (req, res) => {
+	res.redirect("/login");
+});
 
 router.get("/signup",userController.renderSignupForm
 );
