@@ -1,27 +1,100 @@
-<%- layout("layouts/boilerplate") %>
-  <div class="row">
-    <h1 class="col-6 offset-3 mt-3">SignUp on Wanderlust</h1>
-    <div class="col-6 offset-3">
-      <form action="/signup" method="POST" class="needs-validation" novalidate>
-        <div class="mb-3">
-          <label for="username" class="form-label">Username</label>
-          <input name="username" id="username" type="text" class="form-control" required>
-          <div class="valid-feedback">
-            Looks good!
+<%- layout("layouts/auth-boilerplate") %>
+
+<div class="login-container">
+  <div class="login-wrapper">
+    <div class="login-card">
+      <!-- Header Section -->
+      <div class="login-header">
+        <div class="login-icon-wrapper">
+          <i class="fas fa-compass"></i>
+        </div>
+        <h1 class="login-title">Join Wanderlust</h1>
+        <p class="login-subtitle">Start Your Adventure Today</p>
+      </div>
+
+      <!-- Form Section -->
+      <form action="/signup" method="POST" class="login-form needs-validation" novalidate>
+        <!-- Username Field -->
+        <div class="form-group-custom">
+          <div class="input-wrapper">
+            <i class="fas fa-user input-icon"></i>
+            <input 
+              name="username" 
+              id="username" 
+              type="text" 
+              class="form-control-custom" 
+              placeholder="Choose your username"
+              required
+            >
+            <div class="form-focus-line"></div>
           </div>
+          <small class="form-text-help">This will be your unique identity</small>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input name="email" id="email" type="email" class="form-control" required>
 
+        <!-- Email Field -->
+        <div class="form-group-custom">
+          <div class="input-wrapper">
+            <i class="fas fa-envelope input-icon"></i>
+            <input 
+              name="email" 
+              id="email" 
+              type="email" 
+              class="form-control-custom" 
+              placeholder="Enter your email address"
+              required
+            >
+            <div class="form-focus-line"></div>
+          </div>
+          <small class="form-text-help">We'll never share your email</small>
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input name="password" id="password" type="password" class="form-control" required>
 
+        <!-- Password Field -->
+        <div class="form-group-custom">
+          <div class="input-wrapper">
+            <i class="fas fa-lock input-icon"></i>
+            <input 
+              name="password" 
+              id="password" 
+              type="password" 
+              class="form-control-custom" 
+              placeholder="Create a strong password"
+              required
+            >
+            <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+            <div class="form-focus-line"></div>
+          </div>
+          <small class="form-text-help">At least 8 characters recommended</small>
         </div>
-        <button class="btn btn-success">SignUp</button>
 
+        <!-- Signup Button -->
+        <button type="submit" class="login-btn">
+          <span class="btn-text">Create Account</span>
+          <i class="fas fa-arrow-right btn-icon"></i>
+        </button>
+
+        <!-- Divider -->
+        <div class="login-divider">
+          <span>Already have an account?</span>
+        </div>
+
+        <!-- Login Link -->
+        <a href="/login" class="signup-link">
+          Sign In Here
+        </a>
       </form>
+
+      <!-- Made By Section -->
+      <div class="made-by-section">
+        <p class="made-by-text">
+          <i class="fas fa-heart"></i>
+          Made with passion by <span class="creator-name">Dheeraj</span>
+        </p>
+      </div>
     </div>
   </div>
+
+  <!-- Decorative Background Elements -->
+  <div class="login-bg-decoration decoration-1"></div>
+  <div class="login-bg-decoration decoration-2"></div>
+  <div class="login-bg-decoration decoration-3"></div>
+</div>

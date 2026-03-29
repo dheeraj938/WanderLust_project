@@ -271,3 +271,6 @@ For issues or questions, please open an issue on the [GitHub repository](https:/
 ---
 
 **Happy Traveling with WanderLust! 🌍✈️**
+
+run node app.js 
+
